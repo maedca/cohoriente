@@ -1,0 +1,33 @@
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="slider.css" />
+</head>
+<body>
+<div class="main">
+ 		<div id="slides">
+ 			<img src="img/_1.jpg">
+ 			<img src="img/_2.jpg">
+ 			<img src="img/_3.jpg">
+ 			<img src="img/_4.jpg">
+ 			<img src="img/_5.jpg">
+ 			<img src="img/_6.jpg">
+ 		</div>
+ 	</div>
+ 	 <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+ 	<script src="js/jquery.slides.js"></script>
+ 	<script>
+ 	$(function(){
+  	$("#slides").slidesjs({
+    play: {
+      active: false,
+      effect: "slide",
+      interval: 4000,
+      auto: true,
+      swap: true,
+      pauseOnHover: false,
+      restartDelay: 2500,
+    }
+  });
+});
+ 	</script>
+ </body>

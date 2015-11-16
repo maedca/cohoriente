@@ -1,0 +1,138 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Asociación para el recaudo de derechos de autor y gestión individual - asesoría juridica ">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<title>Cohoriente | Red de hospitales publicos del oriente colombiano</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="normalize.css" /> 
+	<link rel="stylesheet" href="contacto.css" />
+	<script src="prefixfree.js"></script>
+</head>
+
+<body>
+	
+	<header>
+		<figure class="logo">
+			<img src="img/logo.svg" alt="logo cohoriente"/>
+		</figure>
+		<div class="slider" frameborder="0" scrolling=no >
+			<iframe src="slider.html"></iframe>
+		</div>
+		<h1>Cohoriente</h1>
+	</header>
+
+	<nav>
+		<div class="social">
+			<a href="#" class="icon-facebook2"></a>
+			<a href="#" class="icon-twitter2"></a>
+			<a href="#" class="icon-youtube3"></a>
+		</div>
+		<ul>
+			<li><a href="index.html">Cohoriente</a></li>
+			<li><a href="nosotros.html">Nosotros</a></li>
+			<li><a href="servicios.html">Servicios</a></li>
+			<li><a href="socios.html">Socios</a></li>
+			<li><a href="asociarce.html">Asociarce</a></li>
+			<li><a href="documentacion.html">Documentacion</a></li>
+			<li><a href="galeria.html">Galeria</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+		</ul>
+	</nav>
+
+	<section>
+
+		<div id="intermedio">
+			<div class="contacto">
+				<p class="title"><strong>CONTACTO CORPORATIVO</strong></p>
+
+				<div class="alineacion_1">
+					<div class="div_form">
+						<form class="Footer-form" id="form1" method="post" action="send.php">
+				            <input class="Footer-formInput"  type="text" placeholder="Nombre" id="nombre" name="name" />
+				            <input class="Footer-formInput" type="email" placeholder="Email" id="email" name="subject" />
+				            <input class="Footer-formInput"  type="text" placeholder="Asunto" id="asunto" name="asunt" />
+				            <textarea class="Footer-textarea" placeholder="Motivo" id="mensaje" name="message"></textarea>
+				            <button type="submit" class="Footer-button"> Enviar </button>
+				        </form>
+
+				        <div class="direccion">
+			        		<p class="Footer-tittle">Lunes a viernes de 8:00am. a 12:00pm.</p>
+							<p class="Footer-description">Calle 52 No. 47 - 28 Ed. La Ceiba Piso 12 Of. 1221A</p>
+							<p class="Footer-description">Tel. 57 (4) 2 51 10 89</p>
+							<p class="Footer-description">Cel. 314 621 4891 - 314 620 7336.</p>
+			       		</div>					        
+				    </div>					    
+				</div>
+
+				<div class="alineacion_2">
+					<div id="geo" class="geo"></div>
+				</div>
+						
+			</div>
+		</div>
+
+	</section>
+
+
+	<footer>
+		<div class="inferior">
+
+			<div class="legal">
+				<p>
+					<strong>© Cohoriente - Red de Hospitales Publicos del Oriente Colombiano</strong>
+				</p>
+				<p>
+					Todos Los Derechos Reservados 2015.
+				</p>
+				<p class="pmd">
+				<span class="desa"> Desarrollado por</span><a href="https://www.pmd.com.co"> <img src="img/logo_pmd.png" class="logo_pmd" alt="pmd"></a>
+				</p>
+			
+			</div>
+
+		</div>
+	</footer>
+
+<script src="http://maps.google.com/maps/api/js?sensor=false&callback=init"></script>
+
+<script type="text/javascript">
+
+var map;
+	var marker;
+
+	function init(){
+		
+		var mapOptions = {
+			center: new google.maps.LatLng(6.2498289,-75.5656699),
+			zoom: 15, 
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		map = new google.maps.Map(document.getElementById("geo"),mapOptions);
+
+		var place = new google.maps.LatLng(6.2498289,-75.5656699);
+		marker = new google.maps.Marker({
+			position: place,
+			title: "Garrido Abad",
+			map: map
+			
+		});
+
+		google.maps.event.addListener(marker, "click", showInfo);
+
+	}
+
+	function showInfo() {
+		map.setZoom(16);
+		map.setCenter(marker.getPosition());
+		var infowindow = new google.maps.InfoWindow({
+			content: "Garrido Abad"
+		});
+		infowindow.open(map,marker);
+	}
+	
+</script>
+
+</body>
+</html>
